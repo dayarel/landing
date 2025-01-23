@@ -6,7 +6,7 @@ header {
   .header-info-line {
     background-color: $primary;
     padding-block: 0.75rem;
-    @include min(sm) {
+    @include min(lg) {
       padding-block: 1.25rem;
     }
     p {
@@ -24,7 +24,7 @@ header {
   .header-logo {
     @include flex;
     padding-block: 1.5rem;
-    @include min(sm) {
+    @include min(lg) {
       padding-block: 4rem;
     }
     @include min(lg) {
@@ -34,7 +34,7 @@ header {
       fill: $primary;
       height: 1.981rem;
       width: 18rem;
-      @include min(sm) {
+      @include min(lg) {
         height: 2.586rem;
         width: 23.5rem;
       }

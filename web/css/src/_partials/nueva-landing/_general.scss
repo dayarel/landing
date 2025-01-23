@@ -72,22 +72,29 @@ body {
   }
   .page-wrapper {
     margin-top: 2.5rem;
-    .container {
-      @include min(lg) {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) 44rem;
-        gap: 3.5rem;
-      }
-      @include min(xl) {
+    @include min(lg) {
+      display: grid;
+      gap: 3.5rem;
+      grid-template-columns: minmax(0, 1fr) 44rem;
+      margin-inline: auto;
+      max-width: 114rem;
+    }
+    @include min(med) {
+      max-width: 132rem;
+    }
+
+    @include min(xl) {
+      max-width: 150rem;
+    }
+    @include min(med) {
+      gap: 6.5rem;
+    }
+    main {
+      display: grid;
+      gap: 4.5rem;
+      grid-template-columns: 100%;
+      @include min(sm) {
         gap: 6.5rem;
-      }
-      main {
-        display: grid;
-        gap: 4.5rem;
-        grid-template-columns: 100%;
-        @include min(sm) {
-          gap: 6.5rem;
-        }
       }
     }
   }

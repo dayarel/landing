@@ -1,34 +1,60 @@
 #plazas {
   @include f-col(3.5);
   background-color: $primary;
-  margin-inline: -2rem;
-  padding: 3.5rem 2rem;
-
+  padding-block: 3.5rem;
+  position: relative;
+  @include min(sm) {
+    padding-block: 6rem;
+  }
+  @include min(lg) {
+    padding-inline: 4rem 6rem;
+    display: flex;
+  }
   @include min(med) {
-    border-radius: 2.5rem;
-    padding: 6rem 4rem;
+    border-radius: 2.5rem 0 0 2.5rem;
+    padding-inline: 4rem 0;
+    margin-right: 12.5rem;
   }
   * {
     color: white;
   }
-  .plazas-content {
-    @include f-col(2.8);
-    @include min(sm) {
-      gap: 4.5rem;
+  img {
+    display: none;
+    @include min(med) {
+      display: block;
+      position: absolute;
+      height: 100%;
+      top: 0;
+      width: auto;
+      right: -12.4rem;
     }
-    .section-title {
-      max-width: 48.7rem;
-      @include min(xl) {
-        max-width: 100%;
-        padding-right: 25rem;
+  }
+  .container {
+    @include f-col(3.5);
+    @include min(lg) {
+      margin-inline: 0;
+      max-width: initial;
+      gap: 5.5rem;
+    }
+    .plazas-content {
+      @include f-col(2.8);
+
+      .section-title {
+        max-width: 48.7rem;
+        @include min(med) {
+          max-width: 100%;
+        }
+        @include min(xl) {
+          max-width: 100%;
+        }
       }
-    }
-    p {
-      @include letter-spacing(1.6);
-      font: 500 1.6rem/1.5 $font;
-      @include min(sm) {
-        @include letter-spacing(2.4);
-        font-size: 2.4rem;
+      p {
+        @include letter-spacing(1.6);
+        font: 500 1.6rem/1.5 $font;
+        @include min(sm) {
+          @include letter-spacing(2.4);
+          font-size: 2.4rem;
+        }
       }
     }
   }

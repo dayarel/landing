@@ -14,8 +14,6 @@
     include 'nav.html'; ?>
     
     <div class="page-wrapper">
-  
-      <div class="container">
         <main>
           <?php 
               include 'hero.html';
@@ -27,7 +25,6 @@
         <aside>
           <?php include 'cupon.html'; ?>
         </aside>
-      </div>
     </div>
 
 <?php 

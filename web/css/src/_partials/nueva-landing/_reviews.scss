@@ -2,6 +2,13 @@
   .reviews-slider-wrapper {
     margin-top: 2.8rem;
     .reviews-slider {
+      .slick-list {
+        margin-inline: -1.5rem;
+        .slick-slide {
+          margin-inline: 1.5rem;
+        }
+      }
+
       .review-single {
         @include f-col(5);
         border: 0.3rem solid $azul-davante;

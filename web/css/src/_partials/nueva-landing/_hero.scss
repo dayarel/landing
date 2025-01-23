@@ -1,11 +1,13 @@
 .landing-hero {
-  align-items: flex-end;
-  display: flex;
   height: 47.5rem;
-  margin-inline: -2rem;
   overflow: hidden;
-  padding: 3.5rem 2rem;
+  padding-block: 3.5rem;
   position: relative;
+  &:after {
+    @include absolute-cover;
+    @include pseudo;
+    background: linear-gradient(transparent 0%, rgba(0, 0, 0, 0.65) 65%);
+  }
   @include min(sm) {
     height: 67.5rem;
   }
@@ -19,40 +21,48 @@
     z-index: -1;
   }
 
-  .landing-hero-content {
-    @include f-col(1.5);
-    @include min(sm) {
-      gap: 3rem;
-    }
-    * {
-      color: white;
-    }
-    h1 {
-      font: 400 2.4rem/1.12 $font;
+  .container {
+    align-items: flex-end;
+    display: flex;
+    height: 100%;
+
+    .landing-hero-content {
+      @include f-col(1.5);
+      position: relative;
+      z-index: 1;
       @include min(sm) {
-        font-size: 3.2rem;
+        gap: 3rem;
       }
-      @include min(xl) {
-        font-size: 4.5rem;
+      * {
+        color: white;
       }
-      span {
-        display: block;
-        font: 700 3.8rem/1.12 $font;
+      h1 {
+        font: 400 2.4rem/1.12 $font;
         @include min(sm) {
-          font-size: 4.7rem;
+          font-size: 3.2rem;
         }
         @include min(xl) {
-          font-size: 6.5rem;
+          font-size: 4.5rem;
+        }
+        span {
+          display: block;
+          font: 700 3.8rem/1.12 $font;
+          @include min(sm) {
+            font-size: 4.7rem;
+          }
+          @include min(xl) {
+            font-size: 6.5rem;
+          }
         }
       }
-    }
-    p {
-      font: 400 1.6rem/1.35 $font;
-      @include min(sm) {
-        font-size: 1.8rem;
-      }
-      @include min(xl) {
-        font-size: 2.1rem;
+      p {
+        font: 400 1.6rem/1.35 $font;
+        @include min(sm) {
+          font-size: 1.8rem;
+        }
+        @include min(xl) {
+          font-size: 2.1rem;
+        }
       }
     }
   }
