@@ -1,16 +1,43 @@
 header {
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 999;
   .header-info-line {
     background-color: $primary;
+    padding-block: 0.75rem;
+    @include min(sm) {
+      padding-block: 1.25rem;
+    }
     p {
       color: white;
-      font: 400 0.8rem/1 $font;
+      font: 500 0.9rem/1 $font;
+      text-align: center;
+      @include min(sm) {
+        font: 500 1.6rem/1.5 $font;
+      }
+      @include min(lg) {
+        font-size: 2.1rem;
+      }
     }
   }
   .header-logo {
+    @include flex;
+    padding-block: 1.5rem;
+    @include min(sm) {
+      padding-block: 4rem;
+    }
+    @include min(lg) {
+      justify-content: flex-start;
+    }
     svg {
       fill: $primary;
-      height: 1.43rem;
-      width: 13rem;
+      height: 1.981rem;
+      width: 18rem;
+      @include min(sm) {
+        height: 2.586rem;
+        width: 23.5rem;
+      }
     }
   }
 }

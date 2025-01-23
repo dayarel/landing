@@ -1,0 +1,63 @@
+#plazas {
+  @include f-col(3.5);
+  background-color: $primary;
+  margin-inline: -2rem;
+  padding: 3.5rem 2rem;
+
+  @include min(med) {
+    border-radius: 2.5rem;
+    padding: 6rem 4rem;
+  }
+  * {
+    color: white;
+  }
+  .plazas-content {
+    @include f-col(2.8);
+    @include min(sm) {
+      gap: 4.5rem;
+    }
+    .section-title {
+      max-width: 48.7rem;
+      @include min(xl) {
+        max-width: 100%;
+        padding-right: 25rem;
+      }
+    }
+    p {
+      @include letter-spacing(1.6);
+      font: 500 1.6rem/1.5 $font;
+      @include min(sm) {
+        @include letter-spacing(2.4);
+        font-size: 2.4rem;
+      }
+    }
+  }
+  .plazas-listado {
+    display: grid;
+    gap: 1.5rem;
+    padding-left: 2.1rem;
+    @include min(xl) {
+      @include repeat-grid(2);
+
+      gap: 4rem 4.5rem;
+    }
+    li {
+      font: 500 1.6rem/1.5 $font;
+      list-style-position: inside;
+      padding-left: 1.7rem;
+      position: relative;
+      @include min(sm) {
+        font-size: 2.1rem;
+      }
+      &:before {
+        @include pseudo;
+        @include absolute(50%, 0);
+        background-color: white;
+        border-radius: 50%;
+        height: 0.7rem;
+        transform: translateY(-50%);
+        width: 0.7rem;
+      }
+    }
+  }
+}

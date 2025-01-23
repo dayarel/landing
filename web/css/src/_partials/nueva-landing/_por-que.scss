@@ -1,0 +1,57 @@
+#por-que {
+  .razones-wrapper {
+    display: grid;
+    margin-top: 4.5rem;
+    @include min(sm) {
+      @include repeat-grid(2);
+    }
+    .razon-single {
+      @include f-col(3.5);
+      border: 0.1rem solid $gray;
+      padding: 2.4rem 3rem;
+      &.gray-razon {
+        background-color: $secondary-section;
+        border: 0;
+      }
+      .razon-icon {
+        @include flex;
+        background-color: $primary;
+        border-radius: 1.5rem;
+        height: 5.5rem;
+        width: 5.5rem;
+        @include min(lg) {
+          height: 7.5rem;
+          width: 7.5rem;
+        }
+        svg {
+          fill: white;
+          height: 2.5rem;
+          width: 2.5rem;
+          @include min(lg) {
+            height: 3.5rem;
+            width: 3.5rem;
+          }
+        }
+      }
+      .razon-content {
+        @include f-col(2);
+
+        .razon-title {
+          @include letter-spacing(2.1);
+          font: 600 2.1rem/1 $font;
+          @include min(lg) {
+            @include letter-spacing(2.4);
+            font-size: 2.4rem;
+          }
+        }
+        .razon-copy {
+          color: $secondary-light;
+          font: 500 1.6rem/1.5 $font;
+          @include min(lg) {
+            font-size: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

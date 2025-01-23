@@ -1,0 +1,118 @@
+#reviews {
+  .reviews-slider-wrapper {
+    margin-top: 2.8rem;
+    .reviews-slider {
+      .review-single {
+        @include f-col(5);
+        border: 0.3rem solid $azul-davante;
+        border-radius: 2.5rem;
+        padding: 2.2rem 3rem;
+        .review-main {
+          @include f-col(5);
+          .review-persona {
+            align-items: center;
+            display: flex;
+            gap: 2rem;
+            .review-foto-wrapper {
+              height: 5.5rem;
+              object-fit: cover;
+              width: 5.5rem;
+              @include min(sm) {
+                height: 8.5rem;
+                width: 8.5rem;
+              }
+              img {
+                @include img-resp;
+                border-radius: 1.4rem;
+                object-fit: cover;
+                @include min(sm) {
+                  border-radius: 2.1rem;
+                }
+              }
+            }
+            .review-datos {
+              @include f-col(0.5);
+              @include min(sm) {
+                gap: 1.3rem;
+              }
+              .persona-nombre {
+                @include letter-spacing(1.8);
+                font: 600 1.8rem / 1 $font;
+                @include min(sm) {
+                  @include letter-spacing(2.4);
+                  font-size: 2.4rem;
+                }
+              }
+              .persona-detalle {
+                @include letter-spacing(1.6);
+                color: $secondary-light;
+                font: 600 1.6rem/1 $font;
+                @include min(sm) {
+                  @include letter-spacing(2.4);
+                  font-size: 2.4rem;
+                }
+              }
+            }
+          }
+          .review-contenido {
+            p {
+              color: $secondary-light;
+              font: 500 1.6rem/1.5 $font;
+              @include min(sm) {
+                font-size: 2.1rem;
+              }
+            }
+          }
+        }
+        a {
+          @include flex(flex-start);
+          align-self: flex-end;
+          gap: 0.5rem;
+          color: $primary;
+          font: 700 1.6rem/1 $font;
+          text-decoration: none;
+          @include min(sm) {
+            font-size: 1.8rem;
+          }
+          svg {
+            fill: $primary;
+            height: 0.832rem;
+            width: 0.5rem;
+            @include min(sm) {
+              height: 1rem;
+              width: 0.6rem;
+            }
+          }
+        }
+      }
+    }
+    .reviews-nav {
+      display: flex;
+      gap: 2.3rem;
+      margin-inline: auto;
+      margin-top: 3.5rem;
+      width: max-content;
+      .reviews-prev,
+      .reviews-next {
+        @include flex;
+        border: 0.2rem solid $primary-light;
+        cursor: pointer;
+        height: 4.5rem;
+        transition: 0.35s ease-in-out;
+        width: 4.5rem;
+        &:hover {
+          background-color: $primary;
+          svg {
+            fill: white;
+          }
+        }
+        svg {
+          fill: $primary-dark;
+          height: 2.194rem;
+          transition: 0.35s ease-in-out;
+          width: 1.2rem;
+        }
+      }
+    }
+  }
+}

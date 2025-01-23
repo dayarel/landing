@@ -8,7 +8,7 @@ $primary: #f56600;
 $primary-light: #ff9346;
 $primary-dark: #d35700;
 
-$secondary: #3a3a4a;
+$secondary: #3a3a3a;
 $secondary-light: #707070;
 $secondary-section: #f6f6f6;
 
@@ -30,4 +30,69 @@ html {
   font-family: $font, sans-serif;
   font-size: 62.5%;
   line-height: 1;
+}
+
+body {
+  .hidden {
+    display: none;
+  }
+  &.blocked {
+    overflow: hidden;
+    user-select: none;
+  }
+  .overlay {
+    background-color: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(1rem);
+    display: none;
+    left: 0;
+    pointer-events: none;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .section-title {
+    @include letter-spacing(2.4);
+    color: $secondary;
+    font: 600 2.4rem/1.33 $font;
+    @include min(sm) {
+      @include letter-spacing(4.2);
+      font-size: 4.2rem;
+    }
+    @include min(xl) {
+      @include letter-spacing(6);
+      font-size: 6rem;
+    }
+  }
+  p {
+    strong {
+      font-weight: 700;
+    }
+  }
+  .page-wrapper {
+    margin-top: 2.5rem;
+    .container {
+      @include min(lg) {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 44rem;
+        gap: 3.5rem;
+      }
+      @include min(xl) {
+        gap: 6.5rem;
+      }
+      main {
+        display: grid;
+        gap: 4.5rem;
+        grid-template-columns: 100%;
+        @include min(sm) {
+          gap: 6.5rem;
+        }
+      }
+    }
+  }
+}
+
+.hidden {
+  display: none;
 }

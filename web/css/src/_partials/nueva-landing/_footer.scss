@@ -1,66 +1,43 @@
 footer {
-  align-items: center;
-  background-color: $grey;
-  display: flex;
-  flex-direction: column;
-  margin-top: 4.5rem;
-  padding: 1.5rem 2.5rem 10.5rem 1.5rem;
+  border-top: 0.2rem solid $gray-light;
+  margin-top: 3.5rem;
+  padding-block: 3.5rem 1.5rem;
   @include min(sm) {
-    flex-direction: row;
-    justify-content: center;
-    gap: 3rem;
-    padding-bottom: 12.5rem;
+    margin-top: 5.5rem;
   }
-  * {
-    color: white;
+  @include min(lg) {
+    padding-block: 3.5rem;
   }
-  svg {
-    height: 1.247rem;
-    width: 11.5rem;
-    @include min(sm) {
-      height: 1.898rem;
-      width: 17.5rem;
+  .container {
+    align-items: center;
+    @include f-col(2.5);
+    @include min(lg) {
+      flex-direction: row;
+      justify-content: space-between;
     }
-  }
-  .footer-content {
-    display: flex;
-    margin-top: 1.5rem;
-    @include min(sm) {
-      margin-top: 0;
-    }
-    p,
-    ul {
-      flex-shrink: 0;
-    }
-    p {
-      font-size: 0.85rem;
-      @include min(sm) {
-        font-size: 1.2rem;
-      }
-      @include min(lg) {
-        font-size: 1.4rem;
+    .header-logo {
+      svg {
+        fill: $primary;
+        height: 1.981rem;
+        width: 18rem;
       }
     }
-    ul {
+    .footer-links {
+      color: $secondary-light;
       display: flex;
-      margin-left: 0.75rem;
+      flex-wrap: wrap;
       li {
-        border-left: 0.1rem solid white;
+        color: $secondary-light;
+        font: 600 1.2rem/1.21 $font;
+        & + li {
+          border-left: 0.1rem solid $secondary-light;
+          margin-left: 0.7rem;
+        }
 
         a {
-          display: block;
-          font-size: 0.85rem !important;
-          padding: 0 0.75rem;
+          color: inherit;
+          padding-left: 0.7rem;
           text-decoration: none;
-          &:hover {
-            text-decoration: underline;
-          }
-          @include min(sm) {
-            font-size: 1.2rem !important;
-          }
-          @include min(lg) {
-            font-size: 1.4rem !important;
-          }
         }
       }
     }

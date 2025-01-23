@@ -2,19 +2,18 @@
     $currentDate = new DateTime();
 ?>
 <footer>
-  <div class="header-logo">
-    <svg><use xlink:href="#logo-masterd"></use></svg>
-  </div>
-  <div class="footer-links">
-    &copy;<?php echo $currentDate->format("Y"); ?>
-
-    <ul>
+  <div class="container">
+    <div class="header-logo">
+      <svg><use xlink:href="#logo-masterd"></use></svg>
+    </div>
+    <ul class="footer-links">
+      <li> &copy;<?php echo $currentDate->format("Y"); ?></li>
       <li><a href="#">Aviso legal</a></li>
       <li><a href="#">Política de privacidad</a></li>
       <li><a href="#">Política de Cookies</a></li>
       <li><a href="#">Ajustes de Cookies</a></li>
     </ul>
-  </div>
+</div>
 </footer>
 </body>
 </html>

@@ -1,0 +1,59 @@
+.landing-hero {
+  align-items: flex-end;
+  display: flex;
+  height: 47.5rem;
+  margin-inline: -2rem;
+  overflow: hidden;
+  padding: 3.5rem 2rem;
+  position: relative;
+  @include min(sm) {
+    height: 67.5rem;
+  }
+  @include min(lg) {
+    border-radius: 2.5rem;
+    margin-inline: 0;
+    padding: 3.5rem;
+  }
+  & > img {
+    @include img-cover;
+    z-index: -1;
+  }
+
+  .landing-hero-content {
+    @include f-col(1.5);
+    @include min(sm) {
+      gap: 3rem;
+    }
+    * {
+      color: white;
+    }
+    h1 {
+      font: 400 2.4rem/1.12 $font;
+      @include min(sm) {
+        font-size: 3.2rem;
+      }
+      @include min(xl) {
+        font-size: 4.5rem;
+      }
+      span {
+        display: block;
+        font: 700 3.8rem/1.12 $font;
+        @include min(sm) {
+          font-size: 4.7rem;
+        }
+        @include min(xl) {
+          font-size: 6.5rem;
+        }
+      }
+    }
+    p {
+      font: 400 1.6rem/1.35 $font;
+      @include min(sm) {
+        font-size: 1.8rem;
+      }
+      @include min(xl) {
+        font-size: 2.1rem;
+      }
+    }
+  }
+}

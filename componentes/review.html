@@ -1,18 +1,21 @@
-<?php foreach($DATOS['personas'] as $persona) { ?>
 <div class="review-single">
   <div class="review-main">
     <div class="review-persona">
-      <img
-        src="web/images/landing-nueva/<?php echo $persona['foto'];?>.jpgß"
-        alt=""
-      />
+      <div class="review-foto-wrapper">
+        <img src="web/images/landing-nueva/alejandra.jpg" alt="" />
+      </div>
       <div class="review-datos">
-        <p class="persona-nombre"><?php echo $persona['nombre']; ?></p>
-        <div class="persona-detalle"><?php echo $persona['detalle']; ?></div>
+        <p class="persona-nombre">Alejandra Martín</p>
+        <p class="persona-detalle">Alumna en 2022</p>
       </div>
     </div>
     <div class="review-contenido">
-      <p><?php echo $persona['contenido']; ?></p>
+      <p>
+        Es un curso muy completo en cuanto a contenidos y preparación para todo
+        tipo de pruebas. Es un sitio donde me están ofreciendo las herramientas
+        para conseguir mi objetivo, recomendé el sitio a un amigo y también se
+        está ...
+      </p>
     </div>
   </div>
   <a href="#">
@@ -22,4 +25,3 @@
     </svg>
   </a>
 </div>
-<?php } ;?>

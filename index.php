@@ -10,25 +10,31 @@
    
     <div class="overlay-modal"></div>
     <?php 
+    include 'icons.html';
     include 'nav.html'; ?>
     
     <div class="page-wrapper">
-      <main>
-        <?php 
-            include 'hero.html';
-            include 'por-que.html';
-            include 'plazas.html';
-            include 'eviews.html';
-        ?>
-      </main>
-      <aside>
-        <?php include 'cupon.html'; ?>
-      </aside>
+  
+      <div class="container">
+        <main>
+          <?php 
+              include 'hero.html';
+              include 'por-que.html';
+              include 'plazas.html';
+              include 'reviews.html';
+          ?>
+        </main>
+        <aside>
+          <?php include 'cupon.html'; ?>
+        </aside>
+      </div>
     </div>
 
 <?php 
-include 'footer'; 
-include 'icons';
+include 'footer.html'; 
 ?>
+<script src="web/js/src/jquery.js"></script>
+<script src="web/js/src/slick.min.js"></script>
+<script src="web/js/dist/init.min.js"></script>
   </body>
 </html>

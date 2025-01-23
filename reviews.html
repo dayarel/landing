@@ -1,22 +1,14 @@
-<?php
-  $DATOS['personas']= [
-    ['foto' =>
-'javier', 'nombre' => 'Javier Pérez', 'detalle' => 'Alumno en 2023',
-'contenido'=> 'Pensé en una academia que me preparase bien, que cuidase todos
-los aspectos que influyen en las oposiciones, tanto teóricos como psicológicos,
-y después de conocer a la gente tan atenta y simpática de MasterD no ....'],
-['foto' => 'alejandra', 'nombre' => 'Javier Pérez', 'detalle' => 'Alumna en
-2022', 'contenido'=> 'Es un curso muy completo en cuanto a contenidos y
-preparación para todo tipo de pruebas. Es un sitio donde me están ofreciendo las
-herramientas para conseguir mi objetivo, recomendé el sitio a un amigo y también
-se está ...'] ]; ?>
-
 <section id="reviews">
-  <h2>No lo decimos nosotros, lo dicen nuestros alumnos</h2>
-  <?php if(isset($DATOS['personas']) && !empty($DATOS['personas'])) { ?>
+  <h2 class="section-title">
+    No lo decimos nosotros, lo dicen nuestros alumnos
+  </h2>
+
   <div class="reviews-slider-wrapper">
     <div class="reviews-slider">
-      <?php include './plantillas/nueva-landing/componentes/review.html'; ?>
+      <?php 
+        include './componentes/review.html';
+        include './componentes/review.html';
+        include './componentes/review.html'; ?>
     </div>
     <div class="reviews-nav">
       <div class="reviews-prev">
@@ -31,5 +23,4 @@ se está ...'] ]; ?>
       </div>
     </div>
   </div>
-  <?php } ?>
 </section>

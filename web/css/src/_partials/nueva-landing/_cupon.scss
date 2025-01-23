@@ -1,0 +1,145 @@
+#cupon {
+  border: 0.4rem solid $primary;
+  border-radius: 3.5rem;
+  display: none;
+  flex-direction: column;
+  gap: 2.5rem;
+  max-width: 44rem;
+  padding: 3.5rem 3.5rem;
+  position: sticky;
+  top: 18rem;
+  width: 100%;
+  @include min(lg) {
+    display: flex;
+  }
+  .cupon-intro {
+    @include f-col(1);
+    .cupon-intro-titulo {
+      font: 600 2.6rem/1.21 $font;
+    }
+    .cupon-intro-copy {
+      font: 500 1.4rem/1.5 $font;
+    }
+  }
+
+  form {
+    @include f-col(2.5);
+    .form-fields {
+      @include f-col(1);
+      input,
+      select {
+        border: 0.1rem solid $secondary-light;
+        border-radius: 3.8rem;
+        font: 500 1.6rem/1.5 $font;
+        padding: 1rem 2rem;
+        width: 100%;
+      }
+      select {
+        appearance: none;
+        background-image: url("../../images/landing-nueva/select-arrow.svg");
+        background-position: calc(100% - 1.5rem) 50%;
+        background-repeat: no-repeat;
+      }
+      .select-wrapper {
+        @include f-col(0.5);
+        .minimos {
+          color: $gray;
+          font: 500 1.4rem/1.5 $font;
+        }
+      }
+    }
+    .checkboxes {
+      @include f-col(1.5);
+      .checkbox {
+        cursor: pointer;
+        display: block;
+        position: relative;
+        user-select: none;
+        input {
+          opacity: 0;
+          position: absolute;
+          pointer-events: none;
+          & + span {
+            cursor: pointer;
+            font: 500 1.2rem/1.33 $font;
+            display: inline-block;
+            min-height: 2.5rem;
+            padding-left: 4rem;
+            position: relative;
+            user-select: none;
+            a {
+              text-decoration: underline;
+            }
+            &:before,
+            &:after {
+              content: "";
+              left: 0;
+              position: absolute;
+              transition: 0.15s ease-in-out;
+              z-index: 1;
+            }
+          }
+          &:not(:checked) {
+            & + span {
+              &:before {
+                border: 0.3rem solid transparent;
+                height: 0;
+                left: 0.6rem;
+                top: 1rem;
+                transform: rotateZ(37deg);
+                transform-origin: 100% 100%;
+                width: 0;
+              }
+              &:after {
+                border: 0.2rem solid $secondary;
+                border-radius: 0.4rem;
+                height: 2.5rem;
+                top: 0;
+                width: 2.5rem;
+                z-index: 0;
+              }
+            }
+          }
+          &:checked {
+            & + span {
+              &:before {
+                border-bottom: 0.3rem solid $primary;
+                border-left: 0.2rem solid transparent;
+                border-right: 0.3rem solid $primary;
+                border-top: 0.2rem solid transparent;
+                filter: drop-shadow(0.2rem 0 0 white)
+                  drop-shadow(0 0.2rem 0 white) drop-shadow(-0.2rem 0 0 white)
+                  drop-shadow(0 -0.2rem 0 white);
+                height: 1.4rem;
+                left: 0.6rem;
+                top: 0.2rem;
+                transform: rotate(37deg);
+                transform-origin: 100% 100%;
+                width: 0.8rem;
+              }
+              &:after {
+                border: 0.2rem solid $secondary;
+                border-radius: 0.4rem;
+                height: 2.5rem;
+                top: 0;
+                width: 2.5rem;
+                z-index: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    button[type="submit"] {
+      border: none;
+      background-color: $primary;
+      border-radius: 4.4rem;
+      color: white;
+      display: block;
+      font: 700 2.4rem/1 $font;
+      margin-inline: auto;
+      padding-block: 1.5rem;
+      width: 28.5rem;
+    }
+  }
+}

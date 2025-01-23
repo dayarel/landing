@@ -12,6 +12,11 @@
   align-items: $alignI;
 }
 
+@mixin f-col($distancia: 0) {
+  display: flex;
+  flex-direction: column;
+  gap: #{$distancia}rem;
+}
 // Posicionamiento
 
 @mixin absolute($top, $left) {
@@ -32,6 +37,10 @@
   width: 100%;
 }
 
+@mixin repeat-grid($cols) {
+  grid-template-columns: repeat($cols, minmax(0, 1fr));
+}
+
 // Elementos
 @mixin box-shadow($x, $y, $offset, $spread, $color, $opacity) {
   box-shadow: $x $y $offset $spread rgba($color, $opacity);
@@ -47,6 +56,10 @@
   @include absolute-cover;
   max-width: 100%;
   object-fit: cover;
+}
+
+@mixin letter-spacing($cantidad) {
+  letter-spacing: calc(-1 * (#{$cantidad}rem / 100));
 }
 
 // Responsive
