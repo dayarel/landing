@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <?php if($imgRRSSS == false) { ?>
+    <meta
+      property="og:image"
+      content="<?php echo BASE_WEB_DIR?>web/images/rectangulares/masterd-preparadores-oposiciones.jpg"
+    />
+    <meta
+      property="og:image:url"
+      content="<?php echo BASE_WEB_DIR?>web/images/rectangulares/masterd-preparadores-oposiciones.jpg"
+    />
+    <meta property="og:image:type" content="jpg" />
+    <meta property="og:image:width" content="1100" />
+    <meta property="og:image:height" content="386" />
+
+    <meta
+      property="og:image"
+      content="<?php echo BASE_WEB_DIR?>web/images/cuadradas/masterd-mejor-academia-oposiciones.jpg"
+    />
+    <meta
+      property="og:image:url"
+      content="<?php echo BASE_WEB_DIR?>web/images/cuadradas/masterd-mejor-academia-oposiciones.jpg"
+    />
+    <meta property="og:image:type" content="jpg" />
+    <meta property="og:image:width" content="386" />
+    <meta property="og:image:height" content="386" />
+    <?php } ?>
+
+    <link
+      rel="shortcut icon"
+      href="<?php echo RUTA_PORTAL . BASE_WEB_DIR?>web/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      rel="shortcut icon"
+      href="<?php echo RUTA_PORTAL . BASE_WEB_DIR?>web/images/favicon.svg"
+      type="image/svg+xml"
+    />
+    <link
+      rel="icon"
+      href="<?php echo RUTA_PORTAL . BASE_WEB_DIR?>web/images/favicon.png"
+    />
+    <link
+      rel="apple-touch-icon"
+      href="<?php echo RUTA_PORTAL . BASE_WEB_DIR?>web/images/favicon.png"
+    />
+
+    <link rel="preconnect" href="https://cdn.masterd.es" crossorigin />
+    <?php
+    if(!empty($__METAS__))
+        foreach($__METAS__ as $l)
+            echo $l."\n";
+    ?>
+
+    <?php if (!empty($DATOSHEAD)) { ?>
+    <link
+      rel="stylesheet"
+      href="<?php echo BASE_WEB_DIR?>web/css/dist/<?php echo $DATOSHEAD['cssPagina']; ?><?php echo (defined('FMOD_CSS_JS') ? '?r=' . FMOD_CSS_JS : ''); ?>"
+    />
+    <?php } ?>
+
+    <?php
+
+    if(!empty($__FICHEROSCSS__))
+        foreach($__FICHEROSCSS__ as $f)
+            echo '<link href="'.$f.'?r='.FMOD_CSS_JS.'" rel="stylesheet" type="text/css"  media="screen,projection"/>
+    '; ?>
+  </head>
+  <body></body>
+</html>

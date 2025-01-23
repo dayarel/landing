@@ -1,0 +1,16 @@
+header {
+  .header-info-line {
+    background-color: $primary;
+    p {
+      color: white;
+      font: 400 0.8rem/1 $font;
+    }
+  }
+  .header-logo {
+    svg {
+      fill: $primary;
+      height: 1.43rem;
+      width: 13rem;
+    }
+  }
+}

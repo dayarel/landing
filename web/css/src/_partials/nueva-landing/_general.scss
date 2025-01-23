@@ -1,0 +1,33 @@
+// Fuente
+
+$font: "Poppins", sans-serif;
+
+// Colores
+
+$primary: #f56600;
+$primary-light: #ff9346;
+$primary-dark: #d35700;
+
+$secondary: #3a3a4a;
+$secondary-light: #707070;
+$secondary-section: #f6f6f6;
+
+$gray: #7f7f7f;
+$gray-light: #eee;
+$gray-dark: #4d4d4d;
+
+$azul-davante: #003594;
+
+// General styles
+* {
+  box-sizing: border-box;
+  color: $secondary;
+  line-height: 1;
+  outline: none !important;
+}
+
+html {
+  font-family: $font, sans-serif;
+  font-size: 62.5%;
+  line-height: 1;
+}

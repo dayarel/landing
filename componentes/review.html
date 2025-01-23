@@ -1,0 +1,25 @@
+<?php foreach($DATOS['personas'] as $persona) { ?>
+<div class="review-single">
+  <div class="review-main">
+    <div class="review-persona">
+      <img
+        src="web/images/landing-nueva/<?php echo $persona['foto'];?>.jpgß"
+        alt=""
+      />
+      <div class="review-datos">
+        <p class="persona-nombre"><?php echo $persona['nombre']; ?></p>
+        <div class="persona-detalle"><?php echo $persona['detalle']; ?></div>
+      </div>
+    </div>
+    <div class="review-contenido">
+      <p><?php echo $persona['contenido']; ?></p>
+    </div>
+  </div>
+  <a href="#">
+    Leer todo
+    <svg>
+      <use xlink:href="#review-arrow"></use>
+    </svg>
+  </a>
+</div>
+<?php } ;?>
