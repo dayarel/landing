@@ -5,9 +5,9 @@
   flex-direction: column;
   gap: 2.5rem;
   max-width: 44rem;
-  padding: 3.5rem 3.5rem;
+  padding: 2.5rem 3.5rem;
   position: sticky;
-  top: 18rem;
+  top: 17rem;
   width: 100%;
   @include min(lg) {
     display: flex;
@@ -30,8 +30,8 @@
       select {
         border: 0.1rem solid $secondary-light;
         border-radius: 3.8rem;
-        font: 500 1.6rem/1.5 $font;
-        padding: 1rem 2rem;
+        font: 500 1.4rem/1 $font;
+        padding: 0.75rem 2rem;
         width: 100%;
       }
       select {
@@ -61,10 +61,10 @@
           pointer-events: none;
           & + span {
             cursor: pointer;
-            font: 500 1.2rem/1.33 $font;
+            font: 500 1rem/1.12 $font;
             display: inline-block;
             min-height: 2.5rem;
-            padding-left: 4rem;
+            padding-left: 3.5rem;
             position: relative;
             user-select: none;
             a {
@@ -93,9 +93,9 @@
               &:after {
                 border: 0.2rem solid $secondary;
                 border-radius: 0.4rem;
-                height: 2.5rem;
+                height: 2rem;
                 top: 0;
-                width: 2.5rem;
+                width: 2rem;
                 z-index: 0;
               }
             }
@@ -120,9 +120,9 @@
               &:after {
                 border: 0.2rem solid $secondary;
                 border-radius: 0.4rem;
-                height: 2.5rem;
+                height: 2rem;
                 top: 0;
-                width: 2.5rem;
+                width: 2rem;
                 z-index: 0;
               }
             }
@@ -136,7 +136,7 @@
       border-radius: 4.4rem;
       color: white;
       display: block;
-      font: 700 2.4rem/1 $font;
+      font: 700 2.1rem/1 $font;
       margin-inline: auto;
       padding-block: 1.5rem;
       width: 28.5rem;

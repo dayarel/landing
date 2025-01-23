@@ -6,18 +6,13 @@ header {
   .header-info-line {
     background-color: $primary;
     padding-block: 0.75rem;
-    @include min(lg) {
-      padding-block: 1.25rem;
-    }
+
     p {
       color: white;
       font: 500 0.9rem/1 $font;
       text-align: center;
       @include min(sm) {
         font: 500 1.6rem/1.5 $font;
-      }
-      @include min(lg) {
-        font-size: 2.1rem;
       }
     }
   }

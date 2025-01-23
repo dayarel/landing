@@ -13,6 +13,7 @@
   }
   @include min(lg) {
     border-radius: 2.5rem;
+    height: 72.545rem;
     margin-inline: 0;
     padding: 3.5rem;
   }
@@ -37,7 +38,7 @@
         color: white;
       }
       h1 {
-        font: 400 2.4rem/1.12 $font;
+        font: 400 2.4rem/1.33 $font;
         @include min(sm) {
           font-size: 3.2rem;
         }
