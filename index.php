@@ -30,9 +30,8 @@
 <?php 
 include 'footer.html'; 
 ?>
-<div class="review-modal">
-  <?php include 
-</div>
+<?php include './componentes/review-modal.html'; ?>
+
 <script src="web/js/src/jquery.js"></script>
 <script src="web/js/src/slick.min.js"></script>
 <script src="web/js/dist/init.min.js"></script>

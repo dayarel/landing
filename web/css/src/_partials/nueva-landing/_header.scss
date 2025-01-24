@@ -1,26 +1,31 @@
+.header-info-line {
+  background-color: $primary;
+  padding-block: 0.75rem;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
+  p {
+    color: white;
+    font: 500 0.9rem/1 $font;
+    text-align: center;
+    @include min(sm) {
+      font: 500 1.6rem/1.5 $font;
+    }
+  }
+}
 header {
   background-color: white;
-  position: sticky;
-  top: 0;
+  margin-top: 2.4rem;
   z-index: 999;
-  .header-info-line {
-    background-color: $primary;
-    padding-block: 0.75rem;
-
-    p {
-      color: white;
-      font: 500 0.9rem/1 $font;
-      text-align: center;
-      @include min(sm) {
-        font: 500 1.6rem/1.5 $font;
-      }
-    }
+  @include min(sm) {
+    margin-top: 3.9rem;
   }
   .header-logo {
     @include flex;
     padding-block: 1.5rem;
     @include min(lg) {
-      padding-block: 4rem;
+      padding-block: 2.5rem;
     }
     @include min(lg) {
       justify-content: flex-start;
@@ -29,10 +34,10 @@ header {
       fill: $primary;
       height: 1.981rem;
       width: 18rem;
-      @include min(lg) {
-        height: 2.586rem;
-        width: 23.5rem;
-      }
+      // @include min(lg) {
+      //   height: 2.586rem;
+      //   width: 23.5rem;
+      // }
     }
   }
 }

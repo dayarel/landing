@@ -16,6 +16,7 @@
       .razon-icon {
         @include flex;
         background-color: $primary;
+        box-shadow: 0 0.6rem 1.2rem rgba($primary, 0.25);
         border-radius: 1.5rem;
         height: 5.5rem;
         width: 5.5rem;

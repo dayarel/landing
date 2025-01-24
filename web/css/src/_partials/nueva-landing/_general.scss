@@ -33,24 +33,26 @@ html {
 }
 
 body {
+  .overlay-modal {
+    backdrop-filter: blur(0.5rem);
+    background-color: rgba(9, 24, 36, 0.99);
+    border-radius: 50%;
+    display: none;
+    height: 200vh;
+    left: 50%;
+    position: fixed;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: center center;
+    width: 200%;
+    z-index: 9999;
+  }
   .hidden {
     display: none;
   }
   &.blocked {
     overflow: hidden;
     user-select: none;
-  }
-  .overlay {
-    background-color: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(1rem);
-    display: none;
-    left: 0;
-    pointer-events: none;
-    position: fixed;
-    height: 100%;
-    top: 0;
-    width: 100%;
-    z-index: 1;
   }
   .section-title {
     @include letter-spacing(2.4);
@@ -71,7 +73,7 @@ body {
     }
   }
   .page-wrapper {
-    margin-top: 2.5rem;
+    margin-top: 1.5rem;
     @include min(lg) {
       display: grid;
       gap: 3.5rem;
