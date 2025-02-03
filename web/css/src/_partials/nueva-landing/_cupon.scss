@@ -83,10 +83,67 @@
         border: 0.1rem solid $secondary-light;
         border-radius: 3.8rem;
         font: 500 1rem/1 $font;
-        padding: 0.75rem 2rem;
+        height: 3rem;
+        padding: 0.75rem 1.5rem;
         width: 100%;
         @include min(lg) {
           font-size: 1.4rem;
+          height: 3.8rem;
+          padding: 0.75rem 2rem;
+        }
+      }
+      // Prefijo cambiante
+      .telefono {
+        display: grid;
+        grid-template-columns: 8.5rem 1fr;
+        height: 3rem;
+        width: 100%;
+        @include min(lg) {
+          grid-template-columns: 10rem 1fr;
+          height: 3.8rem;
+        }
+        .text-tooltip {
+          display: none;
+        }
+        input {
+          border-left: none;
+          border-radius: 0 3.8rem 3.8rem 0;
+        }
+        .prefijo-wrapper {
+          position: relative;
+          .prefijo-dropdown {
+            background-color: transparent;
+            border: none;
+            height: 100%;
+            padding: 0;
+            width: 100%;
+          }
+          .prefijo-box {
+            background-color: #e9e9e9;
+            appearance: none;
+            background-image: url("../../images/landing-nueva/select-arrow.svg");
+            background-position: calc(100% - 1rem) 50%;
+            border-radius: 3.8rem 0 0 3.8rem;
+            background-repeat: no-repeat;
+            border: 0.1rem solid $secondary-light;
+            color: $secondary;
+            cursor: pointer;
+            font-size: 1.2rem;
+            height: 100%;
+            line-height: 3rem;
+            left: 0;
+            padding-left: 1.5rem;
+            pointer-events: none;
+            position: absolute;
+            user-select: none;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            @include min(lg) {
+              font-size: 1.6rem;
+              line-height: 3.8rem;
+            }
+          }
         }
       }
       select {
@@ -99,9 +156,9 @@
         @include f-col(0.5);
         .minimos {
           color: $gray;
-          font: 500 1rem/1.5 $font;
+          font: 500 0.8rem/1.5 $font;
           @include min(lg) {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
           }
         }
       }
